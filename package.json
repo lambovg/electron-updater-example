@@ -10,7 +10,8 @@
   "devDependencies": {
     "electron": "^14.0.1",
     "electron-builder": "^22.11.7",
-    "electron-notarize": "^1.1.1"
+    "electron-notarize": "^1.1.1",
+    "http-server": "^0.9.0"
   },
   "dependencies": {
     "electron-log": "^4.4.1",
@@ -18,9 +19,8 @@
   },
   "build": {
     "publish": {
-      "provider": "github",
-      "owner": "lambovg",
-      "repo": "electron-updater-example"
+      "provider": "generic",
+      "url": "http://127.0.0.1:8080/"
     },
     "appId": "com.github.iffy.electronupdaterexample",
     "afterSign": "./build/notarize.js",
