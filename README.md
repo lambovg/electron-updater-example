@@ -87,3 +87,21 @@ If you can't use GitHub, you can use other providers:
 9. Do steps 5 and 6 again.
 
 10. Open the installed version of the app and see that it updates itself.
+
+
+## Standalone update server - generic
+
+1. You need to start http server on windows
+> .\node_modules\.bin\http-server.cmd wwwroot/ -p 8080
+
+* You need to start http server on mac/linux
+
+> .\node_modules\.bin\http-server wwwroot/ -p 8080
+
+2. Run publish
+3. Copy the files from dist to wwwroot
+4. Download the app from local httpserver running at http://127.0.0.1:8080
+5. Install and run the app
+6. Bump the package.json version
+7. Run publish and copy the new files to wwwroot from dist
+8. Start the installed app and you and check the update
